@@ -579,3 +579,71 @@ footer { background-color: var(--bg-dark-accent); color: var(--secondary-accent)
     .pricing-plan p:not(.price) { min-height: auto; }
     .content-section { padding: 60px 0; }
 }
+
+/* FAQ Container */
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* FAQ Item */
+.faq-item {
+    background-color: #2a3a50; /* Darker background for each item */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Important for maxHeight transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Question Button */
+.faq-question {
+    background-color: #3b4b60; /* Slightly lighter than item background */
+    color: #fff;
+    padding: 18px 25px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover,
+.faq-question.active {
+    background-color: #4c5c70; /* Hover/active state */
+}
+
+/* Icon within the question */
+.faq-question .fas {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .fas {
+    transform: rotate(180deg); /* Rotate icon when active */
+}
+
+/* FAQ Answer */
+.faq-answer {
+    background-color: #2a3a50; /* Same as item background */
+    color: #c0c0c0;
+    padding: 0 25px;
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Smooth transition */
+}
+
+.faq-answer p {
+    padding-bottom: 20px; /* Padding for the content inside */
+    padding-top: 5px;
+    line-height: 1.6;
+}
+
+/* When the answer is open */
+.faq-question.active + .faq-answer {
+    padding: 15px 25px; /* Add padding when open */
+}
