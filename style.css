@@ -579,7 +579,6 @@ footer { background-color: var(--bg-dark-accent); color: var(--secondary-accent)
     .pricing-plan p:not(.price) { min-height: auto; }
     .content-section { padding: 60px 0; }
 }
-
 /* FAQ Container */
 .faq-container {
     max-width: 800px;
